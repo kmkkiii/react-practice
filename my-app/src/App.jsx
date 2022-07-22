@@ -1,5 +1,11 @@
 import { ColorMessage } from "./components/ColorMessage";
+import { CssModules } from "./components/CssModules";
+import { StyledJsx } from "./components/StyledJsx";
 import { useState } from "react"
+import { StyledComponents } from "./components/StyledComponents";
+import { Emotion } from "./components/Emotion";
+import { TailwindCss } from "./components/TailwindCss";
+// import "./index.css"
 
 export const App = () => {
   console.log("レンダリング");
@@ -21,6 +27,11 @@ export const App = () => {
       <ColorMessage color="pink">元気です！</ColorMessage>
       <button onClick={onClickButton}>ボタン</button>
       <p>{num}</p>
+      <CssModules />
+      <StyledJsx />
+      <StyledComponents />
+      <Emotion />
+      {/* <TailwindCss /> */}
     </>
   );
 }
