@@ -9,6 +9,7 @@ export const AdminFlagProvider = props => {
 
   const [isAdmin, setIsAdmin] = useState(false);
 
+  // Contextオブジェクトへオブジェクトの省略記法を使って設定。
   return (
     <AdminFlagContext.Provider value={{isAdmin, setIsAdmin}}>
       {children}

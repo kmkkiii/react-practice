@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { Card } from "./components/Card";
+import { AdminFlagContext } from "./components/providers/AdminFlagProvider";
 
 export const App = () => {
-  const [isAdmin, setIsAdmin] = useState(false);
+  // 同じContextに入っている値が何か更新されたときは
+  // useContextでそのContextを参照しているコンポーネントは全て再レンダリングされる。
+  const {isAdmin, setIsAdmin} = useContext(AdminFlagContext);
 
   const onClickSwitch = () => setIsAdmin(!isAdmin);
 

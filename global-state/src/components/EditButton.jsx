@@ -7,11 +7,9 @@ const style = {
   borderRadius: "8px"
 };
 
-export const EditButton = props => {
-  const { isAdmin } = props;
+export const EditButton = () => {
+  const { isAdmin } = useContext(AdminFlagContext);
 
-  const contextValue = useContext(AdminFlagContext);
-  console.log(contextValue);
   return (
     <button style={style} disabled={!isAdmin}>
       編集
